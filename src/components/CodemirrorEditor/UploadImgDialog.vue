@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useDisplayStore } from '@/stores'
-import { checkImage } from '@/utils'
 import { toTypedSchema } from '@vee-validate/yup'
 import { UploadCloud } from 'lucide-vue-next'
 import { Field, Form } from 'vee-validate'
 import * as yup from 'yup'
+import { useDisplayStore } from '@/stores'
+import { checkImage } from '@/utils'
 
 const emit = defineEmits([`uploadImage`])
 
@@ -338,13 +338,18 @@ const options = [
   },
 ]
 
-const imgHost = ref(`default`)
+const imgHost = ref(`r2`)
 
 const activeName = ref(`upload`)
 
 onBeforeMount(() => {
-  if (localStorage.getItem(`imgHost`)) {
-    imgHost.value = localStorage.getItem(`imgHost`)!
+  const savedHost = localStorage.getItem(`imgHost`)
+  if (savedHost) {
+    imgHost.value = savedHost
+  }
+  else {
+    // 首次使用，设置默认值并保存
+    localStorage.setItem(`imgHost`, `r2`)
   }
 })
 
