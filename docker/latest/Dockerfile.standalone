@@ -1,7 +1,7 @@
 ARG VER_GOLANG=1.17.6-alpine3.15
 ARG VER_ALPINE=3.15
 
-FROM --platform=$BUILDPLATFORM "doocs/md:latest-assets" AS assets
+FROM --platform=$BUILDPLATFORM "rikasai/md:latest-assets" AS assets
 
 FROM --platform=$BUILDPLATFORM "golang:$VER_GOLANG" AS gobuilder
 ARG TARGETARCH

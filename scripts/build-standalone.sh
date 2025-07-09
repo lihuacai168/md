@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RELEASE_DIR='./docker';
-REPO_NAME='doocs/md'
+REPO_NAME='rikasai/md'
 
 for app_ver in $RELEASE_DIR/*; do
 

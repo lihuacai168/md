@@ -3,7 +3,7 @@ ENV LANG="en_US.UTF-8"
 ENV LANGUAGE="en_US.UTF-8"
 ENV LC_ALL="en_US.UTF-8"
 RUN apk add --no-cache curl unzip
-RUN curl -L "https://github.com/doocs/md/archive/refs/heads/main.zip" -o "main.zip" && unzip "main.zip" && mv "md-main" /app
+RUN curl -L "https://github.com/lihuacai168/md/archive/refs/heads/main.zip" -o "main.zip" && unzip "main.zip" && mv "md-main" /app
 WORKDIR /app
 COPY ./patch/vite.config.ts /app/vite.config.ts
 ENV NODE_OPTIONS="--openssl-legacy-provider"
