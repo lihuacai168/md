@@ -3,7 +3,7 @@
 set -euo pipefail
 
 RELEASE_DIR="./docker"
-REPO_NAME="doocs/md"
+REPO_NAME="rikasai/md"
 PLATFORMS="linux/amd64,linux/arm64"
 
 echo "🔧 Multi-arch Docker build started..."
