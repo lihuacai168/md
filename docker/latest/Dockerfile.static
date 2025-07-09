@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM doocs/md:latest-assets AS assets
+FROM --platform=$BUILDPLATFORM rikasai/md:latest-assets AS assets
 
 # detail https://github.com/lipanski/docker-static-website/blob/master/Dockerfile
 FROM --platform=$TARGETPLATFORM lipanski/docker-static-website
